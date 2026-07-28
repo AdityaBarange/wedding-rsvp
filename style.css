@@ -1,0 +1,674 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f8f5f2;
+overflow-x:hidden;
+}
+
+.hero{
+
+height:100vh;
+
+background:url(images/hero.jpg);
+
+background-size:cover;
+
+background-position:center;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.overlay{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(2px);
+
+}
+
+.hero-content{
+
+position:relative;
+
+color:white;
+
+z-index:10;
+
+}
+
+.subtitle{
+
+letter-spacing:3px;
+
+font-size:18px;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:6rem;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+}
+
+.hero span{
+
+color:#d4af37;
+
+}
+
+.hero h3{
+
+font-size:2rem;
+
+font-weight:400;
+
+margin-bottom:25px;
+
+}
+
+.description{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+.btn-gold{
+
+background:#c6a86b;
+
+color:white;
+
+padding:15px 45px;
+
+border-radius:50px;
+
+font-weight:600;
+
+font-size:18px;
+
+transition:.4s;
+
+}
+
+.btn-gold:hover{
+
+background:#b3924f;
+
+transform:translateY(-4px);
+
+color:white;
+
+}
+
+.countdown{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin-top:40px;
+
+flex-wrap:wrap;
+
+}
+
+.countdown div{
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+padding:20px;
+
+border-radius:20px;
+
+min-width:110px;
+
+}
+
+.countdown h2{
+
+margin:0;
+
+font-size:40px;
+
+}
+
+.countdown p{
+
+margin:0;
+
+}
+
+#rsvp{
+
+padding:120px 0;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:3.5rem;
+
+}
+
+.description{
+
+font-size:16px;
+
+}
+
+.countdown{
+
+gap:10px;
+
+}
+
+.countdown div{
+
+min-width:80px;
+
+}
+
+}
+.custom-navbar{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+padding:18px 0;
+
+transition:.4s;
+
+}
+
+.navbar-brand{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:34px;
+
+color:white !important;
+
+}
+
+.nav-link{
+
+color:white !important;
+
+margin-left:25px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.nav-link:hover{
+
+color:#d4af37 !important;
+
+}
+
+.section-title{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:60px;
+
+margin-bottom:30px;
+
+}
+
+.story-text{
+
+font-size:20px;
+
+line-height:2;
+
+color:#666;
+
+}
+
+.events-section{
+
+padding:120px 0;
+
+background:#faf7f2;
+
+}
+
+.section-subtitle{
+
+color:#777;
+
+margin-top:10px;
+
+}
+
+.event-card{
+
+background:white;
+
+border-radius:25px;
+
+padding:40px 25px;
+
+text-align:center;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+transition:.4s;
+
+height:100%;
+
+}
+
+.event-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.event-icon{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+.event-card h4{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.event-card p{
+
+margin:0;
+
+color:#888;
+
+}
+
+.event-card h6{
+
+margin-top:12px;
+
+color:#c6a86b;
+
+font-weight:600;
+
+}
+
+.rsvp-section{
+
+padding:120px 0;
+
+background:#ffffff;
+
+}
+
+.rsvp-card{
+
+background:rgba(255,255,255,.75);
+
+backdrop-filter:blur(20px);
+
+padding:50px;
+
+border-radius:30px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+}
+
+.luxury-input{
+
+border-radius:15px;
+
+padding:16px;
+
+border:1px solid #e5e5e5;
+
+font-size:16px;
+
+}
+
+.luxury-input:focus{
+
+border-color:#c6a86b;
+
+box-shadow:0 0 0 .2rem rgba(198,168,107,.15);
+
+}
+
+.gallery-section{
+    padding:120px 0;
+    background:#faf7f2;
+}
+
+.gallery-img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:.4s;
+    cursor:pointer;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.gallery-img:hover{
+    transform:scale(1.03);
+}
+
+.venue-section{
+
+padding:120px 0;
+
+background:white;
+
+}
+
+.venue-card{
+
+max-width:700px;
+
+margin:auto;
+
+padding:60px;
+
+background:#faf7f2;
+
+border-radius:30px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.venue-card h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.timeline-section{
+
+padding:120px 0;
+
+background:#FFF9F2;
+
+}
+
+.wedding-bg{
+
+background:#ffffff;
+
+}
+
+.timeline-date{
+
+color:#C69C4D;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+}
+
+.timeline-card{
+
+background:#fff;
+
+padding:25px;
+
+margin-bottom:25px;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.timeline-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.timeline-card h4{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:34px;
+
+margin-bottom:20px;
+
+color:#C69C4D;
+
+}
+
+.timeline-card ul{
+
+padding-left:20px;
+
+}
+
+.timeline-card li{
+
+margin-bottom:12px;
+
+font-size:17px;
+
+line-height:1.7;
+
+}
+
+
+/* =========================
+   SUCCESS POPUP
+========================= */
+
+.popup-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:9999;
+}
+
+.popup-overlay.show{
+
+    opacity:1;
+    visibility:visible;
+}
+
+.popup-box{
+
+    width:380px;
+    max-width:90%;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    animation:popup .45s ease;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.18);
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:translateY(40px) scale(.9);
+        opacity:0;
+    }
+
+    to{
+
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+}
+
+.checkmark{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    color:white;
+
+    font-size:50px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:25px;
+
+    animation:pop .5s;
+}
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(.3);
+    }
+
+    70%{
+
+        transform:scale(1.15);
+    }
+
+    100%{
+
+        transform:scale(1);
+    }
+}
+
+.popup-box h2{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+.popup-box p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.popup-box button{
+
+    background:#d4af37;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 40px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.popup-box button:hover{
+
+    transform:translateY(-3px);
+}
