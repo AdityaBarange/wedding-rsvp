@@ -238,7 +238,7 @@ nextButtons.forEach(button => {
 
             // Skip Guest Count if user is not attending
 
-            if (attendance === "No") {
+            if (attendance === "No" || attendance === "Wedding Only") {
 
                 currentStep = 3;
 
