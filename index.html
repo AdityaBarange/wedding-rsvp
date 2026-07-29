@@ -181,25 +181,15 @@ Tell Us Your Availability
 
     <!-- Heading -->
 
-    <div class="sheet-header">
+       <!-- Step Counter -->
 
-        <h2>
+<div
+        class="progress-text"
+        id="progressText">
 
-            Tell Us Your
-            Availability
-
-        </h2>
-
-        <p>
-
-            We'd be delighted to celebrate this
-            special occasion with you.
-
-        </p>
+        STEP 1 OF 4
 
     </div>
-
-
     <!-- Progress -->
 
     <div class="progress">
@@ -213,20 +203,15 @@ Tell Us Your Availability
     </div>
 
 
-    <!-- Step Counter -->
 
-    <div
-        class="progress-text"
-        id="progressText">
 
-        STEP 1 OF 4
-
-    </div>
+    
 
 
     <!-- Form Starts -->
 
 <form id="rsvpForm" autocomplete="off">
+    <div class="steps-wrapper">
 
         <input
             type="hidden"
@@ -245,10 +230,10 @@ Tell Us Your Availability
 ========================================== -->
 
 <div class="step active" data-step="1">
-
+ <div class="step-content">
     <h2>
 
-        Guest Details
+       👋 Let's Get Started
 
     </h2>
 
@@ -305,11 +290,11 @@ Tell Us Your Availability
             required>
 
     </div>
-
+</div>
 
     <button
         type="button"
-        class="submit-btn next-btn">
+       class="next-btn">
 
         Continue →
 
@@ -323,10 +308,10 @@ Tell Us Your Availability
 ========================================== -->
 
 <div class="step" data-step="2">
-
+ <div class="step-content">
     <h2>
 
-        Will You Join Us?
+        ❤️ Will You Celebrate With Us?
 
     </h2>
 
@@ -446,10 +431,10 @@ Tell Us Your Availability
         </div>
 
     </div>
-
+</div>
     <button
         type="button"
-        class="submit-btn next-btn">
+        class="next-btn">
 
         Continue →
 
@@ -462,10 +447,10 @@ Tell Us Your Availability
 ========================================== -->
 
 <div class="step" data-step="3">
-
+ <div class="step-content">
     <h2>
 
-        How Many Guests?
+        👨‍👩‍👧 Guest Count
 
     </h2>
 
@@ -526,9 +511,10 @@ Tell Us Your Availability
 
     </p>
 
+</div>
     <button
         type="button"
-        class="submit-btn next-btn">
+        class="next-btn">
 
         Continue →
 
@@ -542,10 +528,10 @@ Tell Us Your Availability
 ========================================== -->
 
 <div class="step" data-step="4">
-
+ <div class="step-content">
     <h2>
 
-        Leave Us a Message
+        💌 Wishes For Us
 
     </h2>
 
@@ -583,7 +569,7 @@ Tell Us Your Availability
         celebrate this special journey with us.
 
     </div>
-
+</div>
     <button
         type="submit"
         class="submit-btn">
@@ -594,42 +580,11 @@ Tell Us Your Availability
 
 </div>
 
-            <!-- STEP 5 -->
-
-            <div class="step">
-
-                <div class="success">
-
-                    ❤️
-
-                    <h2>
-
-                        Thank You!
-
-                    </h2>
-
-                    <p>
-
-                        Your RSVP has been submitted.
-
-                    </p>
-
-                </div>
-
-            </div>
+  
 
 
-
-            <input
-    type="hidden"
-    id="attendance"
-    name="attendance">
-
-<input
-    type="hidden"
-    id="guestNumber"
-    name="guestNumber"
-    value="1">
+</div>
+          
         </form>
 
     </div>
