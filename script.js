@@ -97,6 +97,18 @@ function showStep(index){
 
     steps[index].classList.add("active");
 
+    const header=document.querySelector(".sheet-header");
+
+    if(index===0){
+
+        header.classList.remove("hide");
+
+    }else{
+
+        header.classList.add("hide");
+
+    }
+
     updateProgress();
 
 }
