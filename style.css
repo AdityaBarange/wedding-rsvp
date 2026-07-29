@@ -957,67 +957,54 @@ textarea{
 ========================================== */
 
 .loading-screen{
-
     position:fixed;
-
     inset:0;
 
-    background:rgba(255,249,244,.98);
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("images/hero.jpg") center center/cover no-repeat;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
+
+    color:#fff;
+    text-align:center;
 
     z-index:9999;
 
     opacity:0;
-
     visibility:hidden;
-
+    pointer-events:none;
     transition:.35s;
-
 }
 
 .loading-screen.show{
 
     opacity:1;
-
     visibility:visible;
+    pointer-events:auto;
 
 }
 
 .loading-heart{
-
-    font-size:58px;
-
-    animation:heartbeat 1s infinite;
-
+    font-size:70px;
+    margin-bottom:20px;
+    animation:heartbeat 1.2s infinite;
 }
 
-.loading-text{
-
-    margin-top:20px;
-
-    font-size:18px;
-
-    color:#5B4B3F;
-
-    font-weight:500;
-
+.loading-screen h2{
+    font-size:36px;
+    font-family:"Cormorant Garamond",serif;
+    margin-bottom:14px;
 }
 
-.loading-sub{
-
-    margin-top:10px;
-
-    color:#8A8177;
-
-    font-size:15px;
-
+.loading-screen p{
+    width:85%;
+    max-width:420px;
+    line-height:1.8;
+    color:rgba(255,255,255,.92);
 }
 
 @keyframes heartbeat{
@@ -1054,110 +1041,234 @@ textarea{
 
 }
 
-/* ==========================================
+/*=========================================
             SUCCESS SCREEN
-========================================== */
+=========================================*/
 
 .success-screen{
 
     position:fixed;
-
     inset:0;
 
-    background:#FFF9F4;
-
     display:flex;
-
-    flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
 
-    text-align:center;
+    padding:25px;
 
-    padding:35px;
+    background:
+linear-gradient(rgba(0,0,0,.20),rgba(0,0,0,.20)),
+url("images/thank-you.jpg") center center/cover no-repeat;
 
     z-index:9999;
 
     opacity:0;
-
     visibility:hidden;
 
-    transition:.4s;
+    transition:.45s;
 
 }
 
 .success-screen.show{
 
     opacity:1;
-
     visibility:visible;
 
 }
 
+
+/*==========================
+      Glass Card
+===========================*/
+
+.success-card{
+
+    width:100%;
+    max-width:430px;
+
+    padding:45px 35px;
+
+    border-radius:38px;
+
+   background:rgba(255,255,255,.05);
+
+/* Much less blur */
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+
+    /* Slightly brighter border */
+    border:1px solid rgba(255,255,255,.30);
+
+  
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.22);
+
+    text-align:center;
+
+}
+
+
+/*==========================
+      Heart
+===========================*/
+
 .success-icon{
 
-    width:110px;
+    width:100px;
+    height:100px;
 
-    height:110px;
+    margin:0 auto 25px;
 
     border-radius:50%;
 
-    background:#FFF1D7;
+    background:#FFF3D8;
 
     display:flex;
-
+    align-items:center;
     justify-content:center;
 
-    align-items:center;
+    font-size:52px;
 
-    font-size:55px;
-
-    margin-bottom:30px;
+    box-shadow:
+    0 15px 35px rgba(255,209,102,.35);
 
 }
 
-.success-screen h2{
+
+/*==========================
+      Heading
+===========================*/
+
+.success-card h2{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:46px;
+    font-size:58px;
 
-    color:#3B3028;
+    color:#F8E4BA;
 
-}
-
-.step[data-step="2"] .step-content{
-
-    padding-bottom:90px;
+    margin-bottom:15px;
 
 }
 
-.success-screen p{
 
-    margin-top:18px;
+/*==========================
+      Divider
+===========================*/
 
-    line-height:1.8;
+.success-divider{
 
-    color:#7D746A;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    max-width:330px;
+    gap:12px;
+
+    margin:18px 0;
+
+    color:#D8B166;
 
 }
 
-.success-date{
+.success-divider::before,
+.success-divider::after{
 
-    margin-top:35px;
+    content:"";
+
+    width:85px;
+
+    height:1px;
+
+    background:rgba(216,177,102,.55);
+
+}
+
+
+/*==========================
+      Text
+===========================*/
+
+.success-card p{
+
+    color:#F4F4F4;
 
     font-size:20px;
 
-    color:#C8A45B;
+    line-height:1.8;
 
-    font-weight:600;
+    margin:20px 0;
 
 }
 
+
+/*==========================
+      Date
+===========================*/
+
+.success-date{
+
+    margin-top:25px;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#E7B95C;
+
+}
+
+
+/*==========================
+      Button
+===========================*/
+
+.success-btn{
+
+    margin-top:35px;
+
+    width:100%;
+    height:62px;
+
+    border:none;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#3B3028;
+
+    background:linear-gradient(135deg,#F4D37A,#C79A3E);
+
+    box-shadow:
+    0 15px 35px rgba(199,154,62,.45);
+
+}
+
+
+/*==========================
+      Footer
+===========================*/
+
+.footer-note{
+
+    margin-top:28px;
+
+    color:#ECECEC;
+
+    font-size:17px;
+
+}
+
+.footer-note strong{
+
+    color:#F4D37A;
+
+}
 /* ==========================================
             SCROLLBAR
 ========================================== */
@@ -1972,4 +2083,42 @@ textarea:focus-visible{
 
 }
 
+
+.loading-screen{
+    position:fixed;
+    inset:0;
+
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("images/hero.jpg") center center/cover no-repeat;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+    text-align:center;
+
+    z-index:9999;
+}
+
+.loading-heart{
+    font-size:70px;
+    margin-bottom:20px;
+    animation:heartbeat 1.2s infinite;
+}
+
+.loading-screen h2{
+    font-size:36px;
+    font-family:"Cormorant Garamond",serif;
+    margin-bottom:14px;
+}
+
+.loading-screen p{
+    width:85%;
+    max-width:420px;
+    line-height:1.8;
+    color:rgba(255,255,255,.92);
+}
 

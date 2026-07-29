@@ -87,46 +87,28 @@ closeSheet.addEventListener("click",()=>{
 // SHOW STEP
 // ======================================
 
-function showStep(index){
+function showStep(index) {
 
-    steps.forEach(step=>{
+    // Update current step
+    currentStep = index;
 
+    // Hide all steps
+    steps.forEach(step => {
         step.classList.remove("active");
-
     });
 
+    // Show current step
     steps[index].classList.add("active");
 
-    const header=document.querySelector(".sheet-header");
+    // Update Progress Bar
+    progressFill.style.width = ((index + 1) / 4) * 100 + "%";
 
-    if(index===0){
-
-        header.classList.remove("hide");
-
-    }else{
-
-        header.classList.add("hide");
-
-    }
-
-    updateProgress();
-
+    // Update Step Text
+    progressText.textContent = `STEP ${index + 1} OF 4`;
 }
 
 
-// ======================================
-// PROGRESS
-// ======================================
 
-function updateProgress(){
-
-    const percent=((currentStep+1)/4)*100;
-
-    progressFill.style.width=percent+"%";
-
-    progressText.innerHTML=`STEP ${currentStep+1} OF 4`;
-
-}
 
 
 // ======================================
@@ -486,3 +468,4 @@ closeSuccess.addEventListener("click", () => {
 
 });
 
+showStep(0);
