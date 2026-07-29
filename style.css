@@ -59,13 +59,13 @@ body{
 
     inset:0;
 
-    width:100%;
+    width:75%;
 
     height:100%;
 
     object-fit:cover;
 
-    transition:.5s;
+    object-position:60% center;
 
 }
 
@@ -658,29 +658,28 @@ textarea{
 
 .attendance-options{
 
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
+    margin-top:20px;
+    gap:12px;
 
 }
 
 .option-card{
 
-    background:#fff;
-
-    border:2px solid #ECE3D7;
-
+    min-height:100px;
+    padding:16px 18px;
     border-radius:22px;
+    margin-bottom:12px;
 
-      padding:16px 18px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-    cursor:pointer;
+}
+.option-icon{
 
-    transition:.35s;
-
-    text-align:center;
+    font-size:28px;
+    margin-bottom:8px;
 
 }
 
@@ -698,25 +697,17 @@ textarea{
 
 .option-card strong{
 
-    display:block;
-
-    margin-top:8px;
-
-    font-size:20px;
-
-    color:#3B3028;
+    font-size:22px;
+    line-height:1.15;
+    margin-bottom:4px;
 
 }
 
 .option-card small{
 
-    display:block;
-
-    margin-top:8px;
-
-    color:#8C8075;
-
-    line-height:1.6;
+    font-size:15px;
+    line-height:1.3;
+    max-width:260px;
 
 }
 
@@ -733,6 +724,8 @@ textarea{
     transform:scale(1.02);
 
 }
+
+
 
 /* ==========================================
             GUEST COUNTER
@@ -1085,6 +1078,12 @@ textarea{
     font-size:46px;
 
     color:#3B3028;
+
+}
+
+.step[data-step="2"] .step-content{
+
+    padding-bottom:90px;
 
 }
 
@@ -1442,7 +1441,7 @@ textarea{
 
     justify-content:center;
 
-    margin:16px 0;
+    margin:16px 0 18px;
 
 }
 
@@ -1605,7 +1604,7 @@ textarea:focus-visible{
 
     margin-top:10px;
 
-    margin-bottom:5px;
+    margin-bottom:18px;
 
 }
 
